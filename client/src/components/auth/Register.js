@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -31,9 +31,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   };
 
   // Redirect if logged in
-  if (isAuthenticated) {
-    return navigate("/dashboard");
-  }
+  useEffect(() => {
+    if (isAuthenticated) {
+      return navigate("/dashboard");
+    }
+  }, [isAuthenticated, navigate]);
 
   return (
     <div className="container">
