@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from "react";
-import { Link, useNavigate, withRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import { createProfile } from "../../actions/profile";
 
-const CreateProfile = ({ createProfile, history }) => {
+const CreateProfile = ({ createProfile }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     company: "",

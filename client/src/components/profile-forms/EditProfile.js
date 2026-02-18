@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Link, useNavigate, withRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -9,7 +9,6 @@ const EditProfile = ({
   profile: { profiles, loading },
   createProfile,
   getCurrentProfile,
-  history,
 }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
