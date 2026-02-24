@@ -14,6 +14,7 @@ import AddExperience from "./components/profile-forms/AddExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
 import Profiles from "./components/profiles/Profiles";
 import Profile from "./components/profile/Profile";
+import Posts from "./components/posts/Posts";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 import store from "./store";
@@ -49,6 +50,7 @@ const App = () => {
               <Route exact path="/edit-profile" element={<EditProfile />} />
               <Route exact path="/add-experience" element={<AddExperience />} />
               <Route exact path="/add-education" element={<AddEducation />} />
+              <Route exact path="/posts" element={<Posts />} />
             </Route>
           </Routes>
         </Fragment>

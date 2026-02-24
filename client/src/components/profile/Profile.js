@@ -39,7 +39,7 @@ const Profile = ({ getProfileById, auth, profile: { profiles, loading } }) => {
             <ProfileAbout profile={profiles} />
             <div className="profile-exp bg-white p-2">
               <h2 className="text-primary">Experience</h2>
-              {profiles.experience.length > 0 ? (
+              {profiles.experience?.length > 0 ? (
                 <Fragment>
                   {profiles.experience.map((experience) => (
                     <ProfileExperience
@@ -55,7 +55,7 @@ const Profile = ({ getProfileById, auth, profile: { profiles, loading } }) => {
 
             <div className="profile-edu bg-white p-2">
               <h2 className="text-primary">Education</h2>
-              {profiles.education.length > 0 ? (
+              {profiles.education?.length > 0 ? (
                 <Fragment>
                   {profiles.education.map((education) => (
                     <ProfileEducation
