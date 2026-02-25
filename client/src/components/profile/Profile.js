@@ -28,7 +28,7 @@ const Profile = ({ getProfileById, auth, profile: { profiles, loading } }) => {
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
-            auth.user._id === profiles.user._id && (
+            auth.user?._id === profiles.user?._id && (
               <Link to="/edit-profile" className="btn btn-dark">
                 Edit Profile
               </Link>
@@ -43,7 +43,7 @@ const Profile = ({ getProfileById, auth, profile: { profiles, loading } }) => {
                 <Fragment>
                   {profiles.experience.map((experience) => (
                     <ProfileExperience
-                      key={experience._id}
+                      key={experience?._id}
                       experience={experience}
                     />
                   ))}
@@ -59,7 +59,7 @@ const Profile = ({ getProfileById, auth, profile: { profiles, loading } }) => {
                 <Fragment>
                   {profiles.education.map((education) => (
                     <ProfileEducation
-                      key={education._id}
+                      key={education?._id}
                       education={education}
                     />
                   ))}
